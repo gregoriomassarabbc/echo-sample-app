@@ -8,4 +8,5 @@ pluginManagement {
 
 rootProject.name = "My Application2"
 include ':app'
-include ':echo-api'
+include ':core-api'
+include ':echo-stats-old'

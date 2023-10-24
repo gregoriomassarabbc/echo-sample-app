@@ -7,9 +7,10 @@ class EchoTesting(avStatisticsProvider: AVStatisticsProvider)  {
     val avStatisticsProvider: AVStatisticsProvider = avStatisticsProvider
 
     fun play() {
+        Log.i("ECHO CORE API", "Is Playing")
         avStatisticsProvider.trackPlayInitiated()
-        Log.i("ECHO TEST", "Is Playing")
         avStatisticsProvider.trackEnd()
+        avStatisticsProvider.newMethod()
     }
 
 }

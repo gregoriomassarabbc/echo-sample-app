@@ -52,19 +52,14 @@ dependencies {
     implementation platform('org.jetbrains.kotlin:kotlin-bom:1.8.0')
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
     implementation 'androidx.activity:activity-compose:1.5.1'
-
     implementation "androidx.appcompat:appcompat:1.2.0"
     implementation "androidx.legacy:legacy-support-v4:1.0.0"
     implementation "androidx.constraintlayout:constraintlayout:[2, 3)"
-
-
-
     implementation platform('androidx.compose:compose-bom:2022.10.00')
     implementation 'androidx.compose.ui:ui'
     implementation 'androidx.compose.ui:ui-graphics'
     implementation 'androidx.compose.ui:ui-tooling-preview'
     implementation 'androidx.compose.material3:material3'
-    implementation project(path: ':echo-api')
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
@@ -73,19 +68,9 @@ dependencies {
     debugImplementation 'androidx.compose.ui:ui-tooling'
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
 
-    // ECHO-STATISTICS AVInsights AVStatisticsProvider interface implementation
-    //implementation(name:"smp-an-echo-statistics-latestSnapshot-debug", ext:"aar")
+    // Core API with New Interface
+    implementation project(path: ':core-api')
 
-    // ECHO-STATISTICS RICH MEDIA AVStatisticsProvider interface implementation
-    implementation "uk.co.bbc:smp-an-echo-statistics:3.1.0"
-
-    // SMP-ANDROID AVInsights AVStatisticsProvider interface
-   // implementation(name:"smp-an-droid-latestRelease-release", ext:"aar")
-
-    // SMP-ANDROID RICH MEDIA AVStatisticsProvider interface
-    implementation 'uk.co.bbc:smp-android:42.1.0'
-
-    implementation "uk.co.bbc:echo-client-android:19.10.0"
-
-    implementation(name:"echo-api-no-changes", ext:"aar")
+    // Echo Stats Old Interface
+    implementation(name: "echo-stats-old-debug", ext: "aar")
 }
